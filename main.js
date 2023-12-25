@@ -1,6 +1,6 @@
 var defaultProducts = [
-    { name: "宜~花現東台灣", price: 14000, image: "../image/image1.jpg", date: "2024-01-15" },
-    { name: "漫遊高雄", price: 8000, image: "../image/image2.jpg", date: "2024-02-01" }
+    { name: "宜~花現東台灣", price: 14000, image: "image/image1.jpg", date: "2024-01-15" },
+    { name: "漫遊高雄", price: 8000, image: "image/image2.jpg", date: "2024-02-01" }
 ];
 
 function goToGamePage() {
