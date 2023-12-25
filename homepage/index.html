@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js" defer></script>
+    <title>Joe是愛旅遊</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="left-section">
+                <h1>Joe是愛旅遊</h1>
+            </div>
+            <div class="right-section">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="搜尋商品">
+                    <input type="date" id="date-input">
+                    <button class="search-button" onclick="search()"><i class="fas fa-search"></i></button>
+                </div>
+                <button class="logout-button" onclick="logout()">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="slideshow">
+        <div class="slide-wrapper">
+            <div class="slide active">
+                <img src="../image/image1.jpg" alt="Image 1">
+            </div>
+            <div class="slide active">
+                <img src="../image/image2.jpg" alt="Image 2">
+            </div>
+            <div class="slide active">
+                <img src="../image/image3.jpg" alt="Image 3">
+            </div>
+            <div class="slide active">
+                <img src="../image/image4.jpg" alt="Image 4">
+            </div>
+            <div class="slide active">
+                <img src="../image/image5.jpg" alt="Image 5">
+            </div>
+            <div class="slide active">
+                <img src="../image/image6.jpg" alt="Image 6">
+            </div>
+            <div class="slide active">
+                <img src="../image/image7.jpg" alt="Image 7">
+            </div>
+            <!-- 更多幻灯片... -->
+        </div>
+        <div class="controls">
+            <div class="prev-arrow" onclick="slideToPrev()">&lt;</div>
+            <div class="next-arrow" onclick="slideToNext()">&gt;</div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container">
+            <h2>全部商品</h2>
+            <div class="showcase-container" id="latestShowcaseContainer"></div>
+        </div>
+    </section>
+
+    <div id="product-info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeProductInfo()">&times;</span>
+            <div class="product-info">
+                <div class="product-image">
+                    <img src="" id="product-image">
+                </div>
+                <div class="product-details">
+                    <h2 id="product-name"></h2>
+                    <div class="product-price">
+                        <span id="product-price-value"></span>
+                    </div>
+
+                    <div class="product-date" id="product-date-value"></div>
+                    <button class="view-details-button" onclick="goToProductDetailsPage()">查看详情</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>版權所有 © 2023 Joe是愛旅遊</p>
+        </div>
+    </footer>
+</body>
+
+</html>
