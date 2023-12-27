@@ -1,6 +1,6 @@
 var defaultProducts = [
-    { name: "宜~花現東台灣", price: 14000, image: "image/image1.jpg", date: "2024-01-15" },
-    { name: "漫遊高雄", price: 8000, image: "image/image2.jpg", date: "2024-02-01" }
+    { name: "[4天3夜] 宜~花現東台灣", price: 16000, image: "image/product-image.jpg", date: "2024-01-15" },
+    { name: "[3天2夜] 漫遊高雄", price: 8000, image: "image/k.jpg", date: "2024-02-01" }
 ];
 
 function goToGamePage() {
@@ -89,7 +89,7 @@ function displayProductInfo(product) {
 
     productImage.src = product.image;
     nameElement.textContent = product.name;
-    dateElement.textContent = "演出日期: " + product.date;
+    dateElement.textContent = "出發日期: " + product.date;
 
     // 清空价格元素的内容
     priceElement.textContent = "";
