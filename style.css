@@ -122,15 +122,10 @@ header .container {
 }
 
 .slideshow {
-    background-color: #dfdfdfe7;
-    padding: 0px 0;
-    max-height: calc(100vh - 100px);
+    background-color: #fff;
+    padding: 40px 0;
     overflow: hidden;
     position: relative;
-    width: auto;
-    /* 圖像寬度自動調整，保持長寬比 */
-    height: auto;
-    /* 圖像高度自動調整，保持長寬比 */
 }
 
 .slide-wrapper {
@@ -141,7 +136,7 @@ header .container {
 
 .slide {
     flex: 0 0 16.66%;
-    max-width: 60%;
+    max-width: 100%;
     text-align: center;
     transition: transform 0.5s, opacity 0.5s;
     opacity: 1;
@@ -151,15 +146,13 @@ header .container {
     opacity: 1;
 }
 
-/* 調整幻燈片中圖像的大小 */
 .slide img {
-    max-width: 60%;
-    /* 圖像的最大寬度為容器的100% */
-    max-height: calc(100vh - 100px);
-    width: auto;
-    /* 圖像寬度自動調整，保持長寬比 */
+    max-width: 40%;
     height: auto;
-    /* 圖像高度自動調整，保持長寬比 */
+    object-fit: contain;
+    border-radius: 5px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 
