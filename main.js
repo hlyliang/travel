@@ -1,5 +1,5 @@
 var defaultProducts = [
-    { name: "[4天3夜] 宜~花現東台灣", price: 16000, image: "image/product-image.jpg", date: "2024-01-01" },
+    { name: "[4天3夜] 宜~花現東台灣", price: 14000, image: "image/product-image.jpg", date: "2024-01-01" },
     { name: "[3天2夜] 漫遊高雄", price: 8000, image: "image/k.jpg", date: "2024-02-01" }
 ];
 
@@ -89,14 +89,15 @@ function displayProductInfo(product) {
 
     productImage.src = product.image;
     nameElement.textContent = product.name;
-    dateElement.textContent = "出發日期: " + product.date;
+    dateElement.textContent = "出發日期: " + product.date + "起";
 
     // 清空价格元素的内容
     priceElement.textContent = "";
 
     // 添加价格信息到价格元素
     var priceText = document.createElement("p");
-    priceText.textContent = "價格: " + product.price;
+    //priceText.textContent = "價格: " + product.price;
+    priceText.textContent = "價格：14000(8人團) / \n15000(未滿8人)";
     priceElement.appendChild(priceText);
 
     // 显示产品信息弹窗
