@@ -1,5 +1,5 @@
 var defaultProducts = [
-    { name: "[4天3夜] 宜~花現東台灣", price: 16000, image: "image/product-image.jpg", date: "2024-01-15" },
+    { name: "[4天3夜] 宜~花現東台灣", price: 16000, image: "image/product-image.jpg", date: "2024-01-01" },
     { name: "[3天2夜] 漫遊高雄", price: 8000, image: "image/k.jpg", date: "2024-02-01" }
 ];
 
