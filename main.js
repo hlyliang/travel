@@ -1,6 +1,6 @@
 var defaultProducts = [
-    { name: "[4天3夜] 宜~花現東台灣", price: 14000, image: "image/product-image.jpg", date: "2024-01-01" },
-    { name: "[3天2夜] 漫遊高雄", price: 8000, image: "image/k.jpg", date: "2024-02-01" }
+    { name: "[4天3夜] \n宜~花現東台灣", price: 14000, image: "image/product-image.jpg", date: "2024-01-01" },
+    { name: "[3天2夜] \n漫遊高雄", price: 8000, image: "image/k.jpg", date: "2024-02-01" }
 ];
 
 function goToGamePage() {
@@ -41,6 +41,46 @@ function slideToNext() {
         slides[0].classList.add("active");
         slideWrapper.style.transform = "translateX(0)";
     }
+}
+
+window.onload = function () {
+    var contactButton = document.getElementById('contactButton');
+    var contactInfoModal = document.createElement('div');
+    var modalContent = document.createElement('div');
+    var closeButton = document.createElement('span');
+    var contactContent = document.createTextNode('電話: +886 912345678');
+    var qrCodeImage = document.createElement('img');
+
+    qrCodeImage.src = 'image/line.jpg';
+    qrCodeImage.width = 100;
+
+    closeButton.classList.add('close-button');
+    closeButton.innerHTML = '&times;';
+    closeButton.onclick = function () {
+        contactInfoModal.style.display = 'none';
+    }
+
+    modalContent.classList.add('modal-content');
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(contactContent);
+    modalContent.appendChild(document.createElement('br'));
+    modalContent.appendChild(qrCodeImage);
+
+    contactInfoModal.appendChild(modalContent);
+    contactInfoModal.classList.add('modal');
+    contactInfoModal.style.display = 'none';
+
+    contactButton.onclick = function (e) {
+        e.preventDefault();
+
+        if (contactInfoModal.style.display === 'block') {
+            contactInfoModal.style.display = 'none';
+        } else {
+            contactInfoModal.style.display = 'block';
+        }
+    }
+
+    document.body.appendChild(contactInfoModal);
 }
 
 function displayLatestProducts() {
@@ -97,7 +137,7 @@ function displayProductInfo(product) {
     // 添加价格信息到价格元素
     var priceText = document.createElement("p");
     //priceText.textContent = "價格: " + product.price;
-    priceText.textContent = "價格：14000(8人團) / \n15000(未滿8人)";
+    priceText.textContent = "8人團：14000/人 \n6人團：15000/人";
     priceElement.appendChild(priceText);
 
     // 显示产品信息弹窗

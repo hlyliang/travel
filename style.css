@@ -121,6 +121,8 @@ header .container {
     margin-bottom: 20px;
 }
 
+
+
 .slideshow {
     background-color: #fff;
     padding: 40px 0;
@@ -233,6 +235,67 @@ header .container {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
+.contact-button {
+    margin-top: 5px;
+    margin-right: 20px;
+    /* 或者您需要的具體數值 */
+    text-decoration: none;
+    /* 去除底線 */
+    height: 40px;
+    background-color: transparent;
+    /* 透明背景 */
+    color: #fff;
+    /* 白色文字 */
+    border: none;
+    /* 無邊框 */
+    cursor: pointer;
+    /* 鼠標懸停時顯示指針 */
+    transition: background-color 0.3s;
+    /* 背景顏色過渡效果 */
+    padding: 8px 10px;
+    /* 內邊距 */
+    text-transform: uppercase;
+    /* 文字大寫 */
+    font-weight: bold;
+    /* 加粗字體 */
+    letter-spacing: 1px;
+    /* 字母間距 */
+    border-radius: 20px;
+    /* 圓角邊框 */
+}
+
+.contact-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 懸浮時背景顏色 */
+}
+
+
+
+/* 隱藏電話和 QR Code 彈出視窗 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+}
+
+/* 其他樣式保持不變 */
+
 
 .search-button {
     background-color: transparent;
@@ -374,6 +437,7 @@ footer p {
 }
 
 .product-info {
+    white-space: pre-line;
     display: flex;
     align-items: center;
 }
